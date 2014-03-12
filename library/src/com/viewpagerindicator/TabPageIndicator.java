@@ -17,6 +17,7 @@
 package com.viewpagerindicator;
 
 import android.content.Context;
+import android.graphics.Typeface;
 import android.support.v4.view.PagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.OnPageChangeListener;
@@ -263,7 +264,17 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
 
         public TabView(Context context) {
             super(context, null, R.attr.vpiTabPageIndicatorStyle);
+            setFont();
         }
+
+        /**
+         * Franco: Method added so we can change the font of the text in the tabs.
+         */
+        private void setFont() {
+            Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/helveticaneue.ttf");
+            setTypeface(font, Typeface.NORMAL);
+        }
+
 
         @Override
         public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
