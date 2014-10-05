@@ -271,10 +271,9 @@ public class TabPageIndicator extends HorizontalScrollView implements PageIndica
          * Franco: Method added so we can change the font of the text in the tabs.
          */
         private void setFont() {
-            Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/helveticaneue.ttf");
+            Typeface font = Typeface.createFromAsset(getContext().getAssets(), "fonts/Roboto-Light.ttf");
             setTypeface(font, Typeface.NORMAL);
         }
-
 
         @Override
         public void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
