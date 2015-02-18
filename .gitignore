@@ -22,3 +22,6 @@ local.properties
 build.xml
 proguard-project.txt
 /.DS_Store
+
+# Ignore some gradle files
+.gradle
